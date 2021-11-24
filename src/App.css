@@ -1,38 +1,93 @@
-.App {
+.main{
+  margin:auto;
+  width:100vw;
+  max-width: 800px;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form{
+  align-self: center;
+  display:flex;
+  
+}
+body{
+  background-color: rgb(155, 208, 235, 0.5);
+}
+h1{
+  text-align: center;
+font-family: 'Comforter Brush',cursive;
+font-size: 50px;
+}
+.imgUrl{
+  width:45%
+}
+.blackout{
+  position: fixed;
+  background-color: rgb(5, 3, 0,0.3);
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+}
+.details{
+  align-self: center;
+  color:white;
+}
+
+.weatherComponent{
+  margin-top:2em;
+  background-color: rgb(51, 117, 161);
+
+  width:80vw;
+  display: flex;
+  max-width: 650px;
+  position:absolute;
+  left:30%;
+  top:30%;
+  border-radius: 2rem;
+}
+.cancelBtn{
+  position:absolute;
+  right:20px;
+  top:10px;
+}
+.stateTable{
+  margin-top:10px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+}
+.StateCard{
+  text-align: center;
+  padding:10px;
+  background-color: beige;
+  border-radius: 20px;
+  cursor:pointer
+}
+.StateCard:hover{
+  background-color: rgb(255, 236, 201);
+}
+.error{
+  background-color: azure;
+  padding:30px;
+  width:80vw;
+  max-width: 600px;
+  border-radius: 20px;
+  margin:auto;
+  margin-top:50px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media  only screen and (max-width:900px) {
+  .weatherComponent{
+    left:10%;
+    
   }
 }
+@media only screen and (min-width:901px)and (max-width:1100px) {
+  .weatherComponent {
+    left: 20%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
