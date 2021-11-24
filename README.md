@@ -3,7 +3,7 @@
 This project is create with openweathermap and countrystatecity API
 for more information, visit:\
 OpenWeatherMap API : https://openweathermap.org/api \
-CountryStateCity API : https://countrystatecity.in/ \
+CountryStateCity API : https://countrystatecity.in/ 
 
 ## Available Scripts
 
