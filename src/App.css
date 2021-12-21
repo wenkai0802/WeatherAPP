@@ -19,9 +19,10 @@ h1{
   text-align: center;
 font-family: 'Comforter Brush',cursive;
 font-size: 50px;
+margin-top: 30px;
 }
 .imgUrl{
-  width:45%
+ width: 100px;
 }
 .blackout{
   position: fixed;
@@ -30,23 +31,39 @@ font-size: 50px;
   left:0;
   width:100vw;
   height:100vh;
+  overflow-y: scroll;
 }
 .details{
-  align-self: center;
-  color:white;
+ 
+ padding:15px;
+ text-align: center;
 }
+.display-box{
+  background-color:azure;
+  margin:20px auto;
+  max-width: 700px;
+  width: 90vw;
+  border-radius: 20px;
+  position: relative;
 
-.weatherComponent{
-  margin-top:2em;
-  background-color: rgb(51, 117, 161);
-
-  width:80vw;
+}
+.weather-item{
+  box-shadow: 5px 10px 18px #888888;
+  border-radius: 20px;
+  background-color: azure;
   display: flex;
-  max-width: 650px;
-  position:absolute;
-  left:30%;
-  top:30%;
-  border-radius: 2rem;
+  flex-direction: column;
+  align-items: center;
+}
+.weather-component{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  padding:20px;
+  
+  
+ 
+  gap:15px;
 }
 .cancelBtn{
   position:absolute;
@@ -79,6 +96,69 @@ font-size: 50px;
   margin-top:50px;
   text-align: center;
 }
+
+.date-picker{
+  padding:0 20%;
+  display:flex;
+  
+}
+.date-swipe{
+  
+  position: relative;
+  flex-grow: 1;
+  left:35%;
+}
+.date{
+  
+  transition: all 0.5s;
+  position: absolute;
+  opacity: 0;
+ 
+}
+.selected-date{
+  
+  transform: translateX(0);
+  opacity: 1;
+}
+.next-date{
+  transform: translateX(-100%);
+  
+}
+.prev-date{
+  transform: translateX(100%);
+}
+.loader {
+  margin:auto;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media  only screen and (max-width:900px) {
   .weatherComponent{
     left:10%;
@@ -90,4 +170,14 @@ font-size: 50px;
     left: 20%;
 
   }
+}
+@media only screen and (max-width:600px) {
+  .stateTable,
+  .weather-component {
+    grid-template-columns: 1fr 1fr;
+  }
+  .date-swipe{
+    left:0px;
+  }
+  
 }
