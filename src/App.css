@@ -104,21 +104,22 @@ margin-top: 30px;
 }
 .date-swipe{
   
-  position: relative;
+  padding:0 35%;
   flex-grow: 1;
-  left:35%;
+  
+
 }
 .date{
   
   transition: all 0.5s;
   position: absolute;
-  opacity: 0;
+  opacity:0;
  
 }
 .selected-date{
   
   transform: translateX(0);
-  opacity: 1;
+  opacity:1;
 }
 .next-date{
   transform: translateX(-100%);
@@ -176,8 +177,8 @@ margin-top: 30px;
   .weather-component {
     grid-template-columns: 1fr 1fr;
   }
-  .date-swipe{
-    left:20px;
+  .date-swipe {
+    padding:0 20%;
   }
   
 }
