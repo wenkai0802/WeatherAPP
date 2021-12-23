@@ -25,6 +25,7 @@ const WeatherComponent = ({ city, list, dateList }) => {
             style={{
               opacity: selectedDateIndex === 0 ? 0 : 1,
               cursor: "pointer",
+              zIndex:2
             }}
             onClick={onPrevDate}
           />
